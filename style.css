@@ -107,9 +107,9 @@ a { color: var(--accent); text-decoration: none; }
 
 .hero-omnie,
 .hero { padding: 28px 0 8px; border-bottom:1px solid var(--line); 
-width: 100%;                /* pełna szerokość okna */
+      width: 100%;                /* pełna szerokość okna */
       min-height: 90vh;          /* 100vh wysokość = całe okno (viewport height) */
-      background-image: url("img/ZP-tlo-index-4.jpg"); /* ścieżka do zdjęcia */
+      background-image: url("img/ZP-tlo-index-4a.jpg"); /* ścieżka do zdjęcia */
       background-size: cover;     /* dopasowanie zdjęcia do sekcji */
       background-position: center;/* wyśrodkowanie zdjęcia */
       background-repeat: no-repeat;/* brak powtarzania */
@@ -150,6 +150,31 @@ width: 100%;                /* pełna szerokość okna */
 }
 /*tak było { width:100%; border-radius:25%; border:3px solid var(--line); }*/
 
+@media (max-width: 900px) {
+  .hero {
+    background-image: url("img/makro-zdjecie-1-mobile.jpg"); /* ścieżka do zdjęcia */
+    background-color: rgba(0,0,0,0.0);
+
+    .hero-image {
+      margin: 0 auto;
+    }
+  }
+
+  .hero-omnie,
+  .hero-kontakt {
+    background-image: url("img/makro-zdjecie-2-mobile.jpg"); /* ścieżka do zdjęcia */
+    background-color: rgba(0,0,0,0.0);
+
+    .hero-image {
+      margin: 0 auto;
+    }
+  }
+
+  .image-kontakt {
+    display: none;
+  }
+}
+
 /*
 .btn { background: var(--accent); color:#0e0e10; padding: 12px 18px; border-radius: 10px; font-weight:600; display:inline-block; }
 .btn.secondary { background: transparent; color: var(--text); border: 1px solid var(--line); }
@@ -182,6 +207,18 @@ width: 100%;                /* pełna szerokość okna */
 
 .btn.secondary {
   background: var(--text);
+}
+
+/* Responsywność */
+@media (max-width: 900px) {
+  .btn {
+    margin-bottom: 10px;
+  }
+
+  /*.about-right {
+    margin-top: 30px;
+    text-align: center; wyśrodkowanie treści w środku 
+  }*/
 }
 
 .section { padding: 36px 0; }
@@ -400,8 +437,8 @@ html, body {
   transform: translateY(-50%);
   font-size: 2.6rem;
 }
-.arrow.left { left: 20px; }
-.arrow.right { right: 20px; }
+.arrow.left { left: 20px; color: #c0c0c0; }
+.arrow.right { right: 20px; color: #c0c0c0; }
 .close { top: 16px; right: 22px; font-size: 2rem; }
 
 /*animacja do miniatur po najechaniu kursorem*/
@@ -761,8 +798,8 @@ html, body {
   }
 
   .contact-icon {
-    width: 52px;
-    height: 52px;
+    width: 62px;
+    height: 62px;
   }
 
   .contact-icon svg {
@@ -874,6 +911,7 @@ html, body {
 
 .contact-form {
   display: flex;
+  max-width: 100%;
   flex-direction: column;
   gap: 20px;
 }
@@ -988,6 +1026,12 @@ textarea:focus {
 }
 
 @media (max-width: 640px) {
+  .grid { grid-template-columns: 1fr; }
+  .card img { height: 220px; }
+}
+
+@media (max-width: 332px) {
+  .hero-grid { grid-template-columns: 1fr; object-fit: cover;}
   .grid { grid-template-columns: 1fr; }
   .card img { height: 220px; }
 }
