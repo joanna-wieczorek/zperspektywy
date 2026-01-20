@@ -968,9 +968,9 @@ textarea:focus {
   background: var(--accent);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 900px) {
   .contact-form-box {
-    padding: 20px;
+    /*padding: 20px;*/
   }
 
   input,
