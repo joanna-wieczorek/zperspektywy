@@ -109,7 +109,7 @@ a { color: var(--accent); text-decoration: none; }
 .hero { padding: 28px 0 8px; border-bottom:1px solid var(--line); 
       width: 100%;                /* pełna szerokość okna */
       min-height: 90vh;          /* 100vh wysokość = całe okno (viewport height) */
-      background-image: url("img/ZP-tlo-index-4a.jpg"); /* ścieżka do zdjęcia */
+      background-image: url("img/makro-zdjecie-1.jpg"); /* ścieżka do zdjęcia */
       background-size: cover;     /* dopasowanie zdjęcia do sekcji */
       background-position: center;/* wyśrodkowanie zdjęcia */
       background-repeat: no-repeat;/* brak powtarzania */
